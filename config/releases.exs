@@ -28,7 +28,8 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
-  secret_key_base: secret_key_base
+  secret_key_base: secret_key_base,
+  check_origin: false
 
 # ## Using releases (Elixir v1.9+)
 #
@@ -36,6 +37,7 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
 # to start each relevant endpoint:
 #
 config :trello_tasker, TrelloTaskerWeb.Endpoint, server: true
+
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
